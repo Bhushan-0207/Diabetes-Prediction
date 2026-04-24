@@ -42,7 +42,7 @@ def predict_route(data: DiabetesInput, user: dict = Depends(verify_token)):
         return result
 
     except Exception as e:
-        print("ERROR:", e)  # 👈 VERY IMPORTANT
+        print("ERROR:", e)  
         return {"error": str(e)}
     
 @router.get("/history")
